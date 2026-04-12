@@ -582,9 +582,13 @@
       </div>
 
       <!-- Featured video -->
-      <div class="video-card mb-8 rounded-2xl overflow-hidden border border-white/5" data-aos="fade-up" data-aos-delay="100">
+      <div class="video-card mb-8 rounded-2xl overflow-hidden border border-white/5 relative" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/images/action-kick.jpeg" alt="Featured highlight" class="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none transition-opacity duration-300" id="hero-poster">
         <video controls class="w-full aspect-video bg-dark" preload="metadata"
-               poster="assets/images/action-kick.jpeg">
+               style="transform: rotate(-90deg);"
+               onplay="document.getElementById('hero-poster').style.opacity='0'"
+               onpause="document.getElementById('hero-poster').style.opacity='1'"
+               onended="document.getElementById('hero-poster').style.opacity='1'">
           <source src="assets/videos/highlight-01.mp4" type="video/mp4" />
           Your browser does not support HTML5 video.
         </video>
@@ -649,25 +653,11 @@
           <p class="text-white/40 text-xs px-3 py-2">Clip 09</p>
         </div>
 
-        <div class="video-card glass-card overflow-hidden rounded-xl sm:col-span-2" data-aos="fade-up" data-aos-delay="100">
+        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
           <video controls class="w-full aspect-video bg-dark" preload="metadata">
             <source src="assets/videos/highlight-10.mp4" type="video/mp4" />
           </video>
           <p class="text-white/40 text-xs px-3 py-2">Clip 10</p>
-        </div>
-
-        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="150">
-          <video controls class="w-full aspect-video bg-dark" preload="metadata">
-            <source src="assets/videos/highlight-11.mp4" type="video/mp4" />
-          </video>
-          <p class="text-white/40 text-xs px-3 py-2">Clip 11</p>
-        </div>
-
-        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
-          <video controls class="w-full aspect-video bg-dark" preload="none">
-            <source src="assets/videos/highlight-14.mp4" type="video/mp4" />
-          </video>
-          <p class="text-white/40 text-xs px-3 py-2">Clip 14</p>
         </div>
 
       </div>
@@ -905,13 +895,12 @@
 
         <!-- Contact Form -->
         <div data-aos="fade-up" data-aos-delay="100">
-          <form action="https://formsubmit.co/oluwamartin@gmail.com" method="POST" class="space-y-4">
+          <form id="contact-form" action="https://formsubmit.co/ajax/oluwamartin@gmail.com" method="POST" class="space-y-4">
 
             <!-- FormSubmit hidden inputs -->
             <input type="hidden" name="_subject" value="Scout Enquiry — Joseph Ojwang Portfolio" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="box" />
-            <input type="hidden" name="_next" value="#contact" />
 
             <div data-aos="fade-up" data-aos-delay="150">
               <label for="name" class="block text-white/60 text-sm mb-2 font-medium">Full Name *</label>
@@ -953,6 +942,10 @@
             </div>
 
           </form>
+          <div id="form-success" class="hidden text-center py-8">
+            <p class="text-gold text-xl font-bold mb-2">Enquiry Sent!</p>
+            <p class="text-white/60 text-sm">Thank you for your interest. We'll get back to you shortly.</p>
+          </div>
         </div>
 
         <!-- Direct contact card -->
@@ -1106,6 +1099,31 @@
         });
       });
 
+    });
+
+    // AJAX form submission — stay on page instead of redirecting to FormSubmit
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = this;
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'SENDING…';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(r => r.ok ? r.json() : Promise.reject(r))
+      .then(() => {
+        form.classList.add('hidden');
+        document.getElementById('form-success').classList.remove('hidden');
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'SEND ENQUIRY';
+        alert('Something went wrong. Please try again or email us directly.');
+      });
     });
   </script>
 
