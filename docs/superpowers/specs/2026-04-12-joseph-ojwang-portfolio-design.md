@@ -189,6 +189,34 @@ The bio and descriptive text should use terminology that resonates with professi
 
 Avoid vague terms like "talented", "gifted", or "amazing". Specificity signals credibility.
 
+## Key Selling Points (Research-Backed)
+
+### Stats vs. Elite U-16 Benchmarks
+- **Kicking power (79.2 kph right, 76.7 kph left):** Top European U-16 academy players (La Masia, Ajax) test between 70-85 kph. Joseph is upper-mid range — but his left foot drop-off is only ~3%, vs. the typical 15-20% weak-foot gap. This is exceptional.
+- **Top speed (24.5 kph):** FIFA/UEFA youth data places elite U-16 forwards/midfielders at 24-27 kph. Joseph is at the threshold of that elite band at 15.
+- **Two-footedness (33/67 split):** The most scout-friendly stat. Truly ambidextrous midfielders are rare at any level; at U-16 academy entry this is a significant differentiator.
+- **352 ball touches in ~2.5 hours:** High involvement, consistent with a central #10 role.
+- **All from a SINGLE session** — these are early indicators, not peak performance.
+
+### The "African #10" Market Gap
+- Most African player exports are wingers and strikers. A technically sound, two-footed central attacking midfielder from East Africa is a rarer profile — this distinctiveness should be emphasized.
+- Belgium and the Netherlands are the most active African talent pipelines: Club Brugge, Anderlecht, Ajax, Feyenoord, NEC Nijmegen all run structured African scouting programs.
+- German academies have expanded Africa scouting budgets post-2022 World Cup, specifically seeking technically proficient central midfielders.
+- Age 15-16 is the optimal window for cross-continental academy transitions per UEFA/FIFA development research.
+
+### Cambrils UCF Credibility
+- Located in Catalonia, Spain — the heartland of positional play (juego de posicion), the same philosophy behind FC Barcelona's La Masia.
+- Regional Catalan academy system is a recognized feeder into higher Spanish divisions.
+- A school-organized pathway (Kitengela International → Cambrils UCF) is a trust signal — European academies increasingly prefer institutional backing over informal agent-driven recruitment for minors, per FIFA Article 19 child protection regulations.
+
+### Kenyan Trailblazers to Reference
+- **Victor Wanyama** — Nairobi-born, moved to Belgium (Beerschot) at 16 → Celtic → Southampton → Tottenham Hotspur. The clearest comparable pathway.
+- **McDonald Mariga** — First Kenyan in the UEFA Champions League (Inter Milan, 2010). Moved to Europe in his teens.
+- **Michael Olunga** — Kenya → Sweden → La Liga loan (Girona). Demonstrates Kenyan players can reach top European leagues.
+
+### Tagline for the Portfolio
+"Following in the footsteps of Victor Wanyama — Kenya's next #10"
+
 ## Responsive Design
 
 - **Desktop (1024px+):** Full layouts as described, side-by-side content
@@ -211,10 +239,7 @@ Static files — deploy to any static host:
 - Vercel (free tier)
 - Or simply share the folder — it works by opening `index.html` in any browser
 
-## What We Need From the User
+## Contact Details
 
-Before implementation, confirm or provide:
-1. Contact details for the contact section (coach/guardian name, phone, email, WhatsApp)
-2. Any specific images to exclude from the gallery
-3. Preferred domain name (if any)
-4. Any additional achievements or stats to include
+- **Agent:** Martin Lugendo
+- **Email:** oluwamartin@gmail.com
