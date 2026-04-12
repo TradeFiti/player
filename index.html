@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joseph Ojwang — Attacking Midfielder #10</title>
+  <meta name="description" content="Joseph Omondi Ojwang — 15-year-old Kenyan attacking midfielder #10 · Kitengela International · Cambrils UCF trial · Available for European scouting." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@700;900&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: { DEFAULT: '#0a0a0f', light: '#0d0d14', mid: '#111827' },
+            gold: { DEFAULT: '#ffd700', dark: '#b8960f', light: '#ffe44d' },
+          },
+          fontFamily: {
+            display: ['Oswald', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* ── Base ── */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #fff; }
+
+    /* ── Gold radial glow ── */
+    .gold-glow {
+      background: radial-gradient(ellipse at 25% 50%, rgba(255,215,0,0.07) 0%, transparent 60%);
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0a0a0f; }
+    ::-webkit-scrollbar-thumb { background: #b8960f; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #ffd700; }
+
+    /* ── Glass card ── */
+    .glass-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 0.75rem;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.625rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #ffd700;
+    }
+
+    /* ── Progress bars ── */
+    .progress-fill { transition: width 1s ease-out 0.3s; }
+
+    /* ── Gallery hover ── */
+    .gallery-item img {
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    /* ── Video card hover ── */
+    .video-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(255,215,0,0.1);
+    }
+
+    /* ── Hero animations ── */
+    @keyframes fadeSlideRight {
+      from { opacity: 0; transform: translateX(-40px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeScaleUp {
+      from { opacity: 0; transform: scale(0.92) translateY(20px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(8px); }
+    }
+
+    .hero-text  { animation: fadeSlideRight 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
+    .hero-photo { animation: fadeScaleUp   0.9s cubic-bezier(0.22,1,0.36,1) 0.4s both; }
+    .hero-cta   { animation: fadeUp        0.7s cubic-bezier(0.22,1,0.36,1) 0.7s both; }
+    .hero-scroll{ animation: fadeUp        0.7s cubic-bezier(0.22,1,0.36,1) 1.0s both; }
+    .bounce-arrow { animation: bounce 1.6s ease-in-out infinite; }
+
+    /* ── Stat number ── */
+    .stat-number { font-family: 'Oswald', sans-serif; }
+
+    /* ── Nav transition ── */
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+  </style>
+</head>
+
+<body class="font-body">
+
+  <!-- ════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14">
+
+        <!-- Logo -->
+        <a href="#hero" class="font-display font-bold text-lg tracking-widest text-white hover:text-gold transition-colors">
+          J.OJWANG <span class="text-gold">#10</span>
+        </a>
+
+        <!-- Desktop links -->
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#profile"    class="text-white/70 hover:text-gold transition-colors">Profile</a>
+          <a href="#trial"      class="text-white/70 hover:text-gold transition-colors">Trial</a>
+          <a href="#stats"      class="text-white/70 hover:text-gold transition-colors">Stats</a>
+          <a href="#highlights" class="text-white/70 hover:text-gold transition-colors">Videos</a>
+          <a href="#gallery"    class="text-white/70 hover:text-gold transition-colors">Gallery</a>
+          <a href="#contact"    class="bg-gold text-dark-DEFAULT font-semibold px-4 py-1.5 rounded-full hover:bg-gold-light transition-colors text-xs tracking-wide">Contact</a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="hamburger-btn" class="md:hidden p-2 text-white/70 hover:text-gold transition-colors" aria-label="Toggle menu">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden overflow-hidden bg-dark-light border-t border-white/5">
+      <div class="flex flex-col px-4 py-4 gap-3 text-sm font-medium">
+        <a href="#profile"    class="nav-link text-white/70 hover:text-gold transition-colors py-1">Profile</a>
+        <a href="#trial"      class="nav-link text-white/70 hover:text-gold transition-colors py-1">Trial</a>
+        <a href="#stats"      class="nav-link text-white/70 hover:text-gold transition-colors py-1">Stats</a>
+        <a href="#highlights" class="nav-link text-white/70 hover:text-gold transition-colors py-1">Videos</a>
+        <a href="#gallery"    class="nav-link text-white/70 hover:text-gold transition-colors py-1">Gallery</a>
+        <a href="#contact"    class="nav-link text-white/70 hover:text-gold transition-colors py-1">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════
+       SECTION 1 — HERO
+  ════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex items-center pt-14 overflow-hidden gold-glow">
+
+    <!-- Giant faded "10" watermark -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+      <span class="font-display text-[30vw] font-black leading-none" style="color: rgba(255,215,0,0.05);">10</span>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <p class="section-label mb-4">Attacking Midfielder · #10</p>
+
+          <h1 class="font-display font-black leading-[0.95] mb-6">
+            <span class="block text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-white">JOSEPH</span>
+            <span class="block text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-gold">OJWANG</span>
+          </h1>
+
+          <div class="space-y-1.5 mb-8 text-white/60 text-sm sm:text-base">
+            <p><span class="text-white/90 font-medium">DOB:</span> 2010 · Age 15 · Kenyan</p>
+            <p><span class="text-white/90 font-medium">School:</span> Kitengela International · Year 10</p>
+          </div>
+
+          <div class="hero-cta flex flex-wrap gap-4">
+            <a href="#highlights"
+               class="inline-flex items-center gap-2 bg-gold text-dark font-semibold px-6 py-3 rounded-full hover:bg-gold-light transition-all duration-200 text-sm tracking-widest shadow-lg shadow-gold/20">
+              VIEW HIGHLIGHTS
+            </a>
+            <a href="#contact"
+               class="inline-flex items-center gap-2 border border-gold/40 text-gold font-semibold px-6 py-3 rounded-full hover:bg-gold/10 hover:border-gold transition-all duration-200 text-sm tracking-widest">
+              CONTACT AGENT
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Photo -->
+        <div class="hero-photo relative flex justify-center lg:justify-end">
+          <!-- Gold glow blur behind photo -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full" style="background: radial-gradient(circle, rgba(255,215,0,0.18) 0%, transparent 70%); filter: blur(40px);"></div>
+          </div>
+          <img src="assets/images/hero-portrait.jpeg"
+               alt="Joseph Ojwang — Attacking Midfielder #10"
+               class="relative z-10 w-72 sm:w-80 lg:w-96 xl:w-[420px] rounded-2xl object-cover shadow-2xl shadow-gold/10"
+               style="max-height: 520px; object-fit: cover;" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
+      <span class="section-label" style="color: rgba(255,255,255,0.4);">Scroll to Discover</span>
+      <div class="bounce-arrow">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       SECTION 2 — PLAYER PROFILE
+  ════════════════════════════════════════ -->
+  <section id="profile" class="bg-dark-light py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="mb-12" data-aos="fade-up">
+        <p class="section-label mb-3">Player Profile</p>
+        <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight">
+          Who Is <span class="text-gold">Joseph?</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14">
+
+        <!-- Bio: 3 cols -->
+        <div class="lg:col-span-3 space-y-6" data-aos="fade-up" data-aos-delay="100">
+          <p class="text-white/80 text-base lg:text-lg leading-relaxed">
+            Joseph Ojwang is a <strong class="text-white">press-resistant attacking midfielder</strong> with an instinctive understanding of space and tempo. His game is built on <strong class="text-white">two-footed ability</strong> — only a 3% kick power drop-off between left and right — enabling him to exploit wide channels and central corridors equally.
+          </p>
+          <p class="text-white/80 text-base lg:text-lg leading-relaxed">
+            Joseph's strengths lie in <strong class="text-white">sharp vertical play</strong>, consistently finding half-spaces behind opposition midfielders and threading passes before pressure arrives. He has a natural gift for <strong class="text-white">carrying the ball under pressure</strong>, absorbing contact, spinning out, and continuing the attack — a trait that separates high-ceiling #10s.
+          </p>
+          <p class="text-white/80 text-base lg:text-lg leading-relaxed">
+            Representing <strong class="text-white">Kitengela International School</strong>, Joseph took part in a fully certified trial with <strong class="text-white">Cambrils UCF</strong> in Spain — immersing himself in Catalan positional methodology at age 15. The trial confirmed what his club coaches had long said: he is ready for the next level.
+          </p>
+
+          <!-- Scout quote -->
+          <blockquote class="glass-card p-6 border-l-4 border-gold mt-6">
+            <p class="text-white/90 text-base italic leading-relaxed">
+              "A high-ceiling #10 — technically complete with both feet, physically developing, and mentally resilient."
+            </p>
+          </blockquote>
+
+          <!-- Pathway reference -->
+          <div class="glass-card p-5 mt-2">
+            <p class="section-label mb-2">Pathway Reference</p>
+            <p class="text-white/70 text-sm leading-relaxed">
+              <strong class="text-gold">Victor Wanyama</strong> — Kenya → Belgium at 16 → Celtic → Tottenham Hotspur → MLS.
+              Joseph follows the same template: elite technical foundations, international exposure early, and the mental profile of someone who does not need time to adapt.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fact Cards: 2 cols -->
+        <div class="lg:col-span-2">
+          <div class="grid grid-cols-2 gap-3">
+
+            <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="150">
+              <p class="section-label mb-1">Full Name</p>
+              <p class="text-white font-semibold text-sm">Joseph Omondi Ojwang</p>
+            </div>
+
+            <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="200">
+              <p class="section-label mb-1">Date of Birth</p>
+              <p class="text-white font-semibold text-sm">2010</p>
+            </div>
+
+            <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="250">
+              <p class="section-label mb-1">Age</p>
+              <p class="text-white font-semibold text-sm">15 years old</p>
+            </div>
+
+            <div class="glass-card p-4 border-gold/20" data-aos="fade-up" data-aos-delay="300">
+              <p class="section-label mb-1">Position</p>
+              <p class="text-gold font-bold text-sm">Attacking Midfielder</p>
+            </div>
+
+            <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="350">
+              <p class="section-label mb-1">Foot</p>
+              <p class="text-white font-semibold text-sm">Both · Right Dominant</p>
+            </div>
+
+            <div class="glass-card p-4" data-aos="fade-up" data-aos-delay="400">
+              <p class="section-label mb-1">Nationality</p>
+              <p class="text-white font-semibold text-sm">🇰🇪 Kenyan</p>
+            </div>
+
+            <div class="glass-card p-4 col-span-2" data-aos="fade-up" data-aos-delay="450">
+              <p class="section-label mb-1">School</p>
+              <p class="text-white font-semibold text-sm">Kitengela International School · Year 10</p>
+            </div>
+
+            <div class="glass-card p-4 col-span-2 border-gold/20" data-aos="fade-up" data-aos-delay="500">
+              <p class="section-label mb-1">European Trial</p>
+              <p class="text-gold font-bold text-sm">Cambrils UCF 🇪🇸 <span class="ml-2 bg-gold/20 text-gold text-xs px-2 py-0.5 rounded-full">✓ CERTIFIED</span></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       SECTION 3 — SPAIN TRIAL
+  ════════════════════════════════════════ -->
+  <section id="trial" class="py-20 md:py-28" style="background: linear-gradient(135deg, #0d0d14 0%, #111827 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="mb-12 text-center" data-aos="fade-up">
+        <p class="section-label mb-3">International Experience</p>
+        <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-3">
+          Successful Trial — <span class="text-gold">Cambrils UCF 🇪🇸</span>
+        </h2>
+        <p class="text-white/50 text-base">Organized through Kitengela International School</p>
+      </div>
+
+      <!-- Row 1: 3 images (wider) -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+        <div class="gallery-item overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <a href="assets/images/trial-certificate.jpeg" class="glightbox" data-gallery="trial" data-title="Trial Certificate — Cambrils UCF">
+            <img src="assets/images/trial-certificate.jpeg" alt="Trial Certificate — Cambrils UCF"
+                 class="w-full aspect-[4/3] object-cover" loading="lazy" />
+          </a>
+        </div>
+        <div class="gallery-item overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <a href="assets/images/trial-action-1.jpeg" class="glightbox" data-gallery="trial" data-title="Joseph in action at Cambrils UCF trial">
+            <img src="assets/images/trial-action-1.jpeg" alt="Joseph in action at Cambrils UCF"
+                 class="w-full aspect-[4/3] object-cover" loading="lazy" />
+          </a>
+        </div>
+        <div class="gallery-item overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="300">
+          <a href="assets/images/trial-team.jpeg" class="glightbox" data-gallery="trial" data-title="Team photo — Cambrils UCF trial">
+            <img src="assets/images/trial-team.jpeg" alt="Team photo — Cambrils UCF trial"
+                 class="w-full aspect-[4/3] object-cover" loading="lazy" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Row 2: 4 images (square) -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+        <div class="gallery-item overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <a href="assets/images/trial-pitch.jpeg" class="glightbox" data-gallery="trial" data-title="Cambrils pitch">
+            <img src="assets/images/trial-pitch.jpeg" alt="Cambrils pitch"
+                 class="w-full aspect-square object-cover" loading="lazy" />
+          </a>
+        </div>
+        <div class="gallery-item overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <a href="assets/images/trial-huddle.jpeg" class="glightbox" data-gallery="trial" data-title="Team huddle at Cambrils UCF">
+            <img src="assets/images/trial-huddle.jpeg" alt="Team huddle"
+                 class="w-full aspect-square object-cover" loading="lazy" />
+          </a>
+        </div>
+        <div class="gallery-item overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="300">
+          <a href="assets/images/trial-certificate-2.jpeg" class="glightbox" data-gallery="trial" data-title="Trial Certificate 2">
+            <img src="assets/images/trial-certificate-2.jpeg" alt="Trial Certificate 2"
+                 class="w-full aspect-square object-cover" loading="lazy" />
+          </a>
+        </div>
+        <div class="gallery-item overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="400">
+          <a href="assets/images/trial-gear.jpeg" class="glightbox" data-gallery="trial" data-title="Joseph in Cambrils gear">
+            <img src="assets/images/trial-gear.jpeg" alt="Cambrils gear"
+                 class="w-full aspect-square object-cover" loading="lazy" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Club info bar -->
+      <div class="glass-card p-6 sm:p-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+          <div class="text-4xl">🇪🇸</div>
+          <div class="flex-1">
+            <p class="text-white font-bold text-lg mb-1">Cambrils UCF — Cambrils, Catalonia, Spain</p>
+            <p class="text-white/60 text-sm leading-relaxed">
+              Training in Catalan positional play methodology — the philosophy behind FC Barcelona's La Masia.
+              Joseph trained alongside international youth prospects in structured rondo, positional, and transition sessions.
+            </p>
+          </div>
+          <div class="flex-shrink-0">
+            <span class="bg-gold text-dark font-bold text-xs px-4 py-2 rounded-full tracking-widest uppercase">TRIAL CERTIFIED</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       SECTION 4 — PERFORMANCE DATA
+  ════════════════════════════════════════ -->
+  <section id="stats" class="bg-dark py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12" data-aos="fade-up">
+        <div>
+          <p class="section-label mb-3">Performance Metrics</p>
+          <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight">
+            Session <span class="text-gold">Snapshot</span>
+          </h2>
+        </div>
+        <div class="flex-shrink-0">
+          <span class="text-xs text-white/40 border border-white/10 rounded-full px-4 py-2 block text-center leading-tight">
+            SINGLE 149-MIN TECHNICAL SESSION<br/>EARLY INDICATORS
+          </span>
+        </div>
+      </div>
+
+      <!-- 4-column headline stats -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <p class="stat-number text-5xl font-black text-gold mb-2" data-target="352" data-decimals="0">0</p>
+          <p class="text-white font-semibold text-sm mb-1">Ball Touches</p>
+          <p class="text-white/40 text-xs">▲ Above avg for age</p>
+        </div>
+
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+          <p class="stat-number text-5xl font-black text-gold mb-2" data-target="79.2" data-decimals="1">0</p>
+          <p class="text-white font-semibold text-sm mb-1">Kick Power (kph)</p>
+          <p class="text-white/40 text-xs">▲ U-16 elite range: 70–85</p>
+        </div>
+
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+          <p class="stat-number text-5xl font-black text-gold mb-2" data-target="24.5" data-decimals="1">0</p>
+          <p class="text-white font-semibold text-sm mb-1">Top Speed (kph)</p>
+          <p class="text-white/40 text-xs">Elite U-16 band: 24–27</p>
+        </div>
+
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="400">
+          <p class="stat-number text-5xl font-black text-gold mb-2" data-target="33" data-decimals="0">0</p>
+          <p class="text-white font-semibold text-sm mb-1">Sprints</p>
+          <p class="text-white/40 text-xs">High-intensity efforts</p>
+        </div>
+
+      </div>
+
+      <!-- Two-footed breakdown -->
+      <div class="glass-card p-6 sm:p-8 mb-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-white font-bold text-lg">Two-Footed Breakdown</h3>
+          <span class="text-xs text-white/40 border border-white/10 rounded-full px-3 py-1">352 total touches</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <!-- Left foot -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-white/70 text-sm font-medium">Left Foot</span>
+              <span class="text-white font-semibold text-sm">117 touches · 33%</span>
+            </div>
+            <div class="w-full bg-white/5 rounded-full h-2 mb-2">
+              <div class="progress-fill bg-white/40 h-2 rounded-full" style="width: 0%;" data-width="33%"></div>
+            </div>
+            <p class="text-white/40 text-xs">76.7 kph kick power</p>
+          </div>
+          <!-- Right foot -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <span class="text-white/70 text-sm font-medium">Right Foot</span>
+                <span class="bg-gold/20 text-gold text-xs px-2 py-0.5 rounded-full font-semibold">DOMINANT</span>
+              </div>
+              <span class="text-white font-semibold text-sm">235 touches · 67%</span>
+            </div>
+            <div class="w-full bg-white/5 rounded-full h-2 mb-2">
+              <div class="progress-fill bg-gold h-2 rounded-full" style="width: 0%;" data-width="67%"></div>
+            </div>
+            <p class="text-white/40 text-xs">79.2 kph kick power</p>
+          </div>
+        </div>
+
+        <div class="mt-6 p-4 bg-gold/5 border border-gold/10 rounded-lg">
+          <p class="text-white/70 text-sm leading-relaxed">
+            <span class="text-gold font-semibold">3% drop-off between feet</span> — exceptionally low. The typical youth player shows a 15–20% performance drop on their weaker foot. Joseph's near-parity is a key marker of genuine two-footedness.
+          </p>
+        </div>
+      </div>
+
+      <!-- Secondary stats row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="glass-card p-5 text-center">
+          <p class="stat-number text-3xl font-black text-white mb-1" data-target="142.2" data-decimals="1">0</p>
+          <p class="text-white/50 text-xs">Sprint Distance (m)</p>
+        </div>
+
+        <div class="glass-card p-5 text-center">
+          <p class="stat-number text-3xl font-black text-white mb-1" data-target="29" data-decimals="0">0</p>
+          <p class="text-white/50 text-xs">Accel / Decel</p>
+        </div>
+
+        <div class="glass-card p-5 text-center">
+          <p class="stat-number text-3xl font-black text-white mb-1" data-target="4.9" data-decimals="1">0</p>
+          <p class="text-white/50 text-xs">Total Distance (km)</p>
+        </div>
+
+        <div class="glass-card p-5 text-center">
+          <p class="stat-number text-3xl font-black text-white mb-1" data-target="149" data-decimals="0">0</p>
+          <p class="text-white/50 text-xs">Session Duration (min)</p>
+        </div>
+      </div>
+
+      <!-- Agility row -->
+      <div class="glass-card p-6 sm:p-8 mb-8" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-white font-bold text-lg mb-6">Agility — Directional Turns</h3>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <p class="text-3xl mb-1">↰</p>
+            <p class="stat-number text-4xl font-black text-gold mb-1" data-target="19" data-decimals="0">0</p>
+            <p class="text-white/50 text-xs">Left Turns</p>
+          </div>
+          <div>
+            <p class="text-3xl mb-1">↩</p>
+            <p class="stat-number text-4xl font-black text-gold mb-1" data-target="26" data-decimals="0">0</p>
+            <p class="text-white/50 text-xs">Back Turns</p>
+          </div>
+          <div>
+            <p class="text-3xl mb-1">↱</p>
+            <p class="stat-number text-4xl font-black text-gold mb-1" data-target="23" data-decimals="0">0</p>
+            <p class="text-white/50 text-xs">Right Turns</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data note -->
+      <p class="text-white/30 text-xs text-center" data-aos="fade-up">
+        Data captured from a single technical training session. Full match analytics and additional session data available on request.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       SECTION 5 — VIDEO HIGHLIGHTS
+  ════════════════════════════════════════ -->
+  <section id="highlights" class="bg-dark-light py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="mb-12 text-center" data-aos="fade-up">
+        <p class="section-label mb-3">Match Footage</p>
+        <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-3">
+          See Him <span class="text-gold">Play</span>
+        </h2>
+        <p class="text-white/50 text-base max-w-xl mx-auto">Training and match footage captured across club sessions. Watch Joseph's technique, vision, and movement in live game situations.</p>
+      </div>
+
+      <!-- Featured video -->
+      <div class="video-card mb-8 rounded-2xl overflow-hidden border border-white/5" data-aos="fade-up" data-aos-delay="100">
+        <video controls class="w-full aspect-video bg-dark" preload="metadata"
+               poster="assets/images/action-kick.jpeg">
+          <source src="assets/videos/highlight-01.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+
+      <!-- Remaining 10 videos grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-02.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 02</p>
+        </div>
+
+        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="150">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-03.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 03</p>
+        </div>
+
+        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-04.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 04</p>
+        </div>
+
+        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="250">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-05.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 05</p>
+        </div>
+
+        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-06.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 06</p>
+        </div>
+
+        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="150">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-07.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 07</p>
+        </div>
+
+        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-08.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 08</p>
+        </div>
+
+        <div class="video-card glass-card overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="250">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-09.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 09</p>
+        </div>
+
+        <div class="video-card glass-card overflow-hidden rounded-xl sm:col-span-2" data-aos="fade-up" data-aos-delay="100">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-10.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 10</p>
+        </div>
+
+        <div class="video-card glass-card overflow-hidden rounded-xl sm:col-span-2" data-aos="fade-up" data-aos-delay="150">
+          <video controls class="w-full aspect-video bg-dark" preload="metadata">
+            <source src="assets/videos/highlight-11.mp4" type="video/mp4" />
+          </video>
+          <p class="text-white/40 text-xs px-3 py-2">Clip 11</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       SECTION 6 — PHOTO GALLERY
+  ════════════════════════════════════════ -->
+  <section id="gallery" class="bg-dark py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="mb-12 text-center" data-aos="fade-up">
+        <p class="section-label mb-3">Gallery</p>
+        <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight">
+          On &amp; Off <span class="text-gold">the Pitch</span>
+        </h2>
+      </div>
+
+      <!-- Masonry columns -->
+      <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="50">
+          <a href="assets/images/action-kick.jpeg" class="glightbox" data-gallery="portfolio" data-title="Joseph — Action: Kick">
+            <img src="assets/images/action-kick.jpeg" alt="Joseph action kick"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <a href="assets/images/hero-portrait.jpeg" class="glightbox" data-gallery="portfolio" data-title="Joseph Ojwang — Portrait">
+            <img src="assets/images/hero-portrait.jpeg" alt="Joseph Ojwang portrait"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="150">
+          <a href="assets/images/trial-certificate.jpeg" class="glightbox" data-gallery="portfolio" data-title="Cambrils UCF — Trial Certificate">
+            <img src="assets/images/trial-certificate.jpeg" alt="Trial certificate"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <a href="assets/images/action-goal.jpeg" class="glightbox" data-gallery="portfolio" data-title="Joseph — Goal Celebration">
+            <img src="assets/images/action-goal.jpeg" alt="Joseph goal"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <a href="assets/images/trial-pitch.jpeg" class="glightbox" data-gallery="portfolio" data-title="Cambrils — Pitch">
+            <img src="assets/images/trial-pitch.jpeg" alt="Trial pitch"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="150">
+          <a href="assets/images/portrait-1.jpeg" class="glightbox" data-gallery="portfolio" data-title="Joseph Ojwang — Portrait 1">
+            <img src="assets/images/portrait-1.jpeg" alt="Portrait 1"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <a href="assets/images/trial-action-1.jpeg" class="glightbox" data-gallery="portfolio" data-title="Joseph in action — Cambrils UCF">
+            <img src="assets/images/trial-action-1.jpeg" alt="Trial action 1"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <a href="assets/images/trial-huddle.jpeg" class="glightbox" data-gallery="portfolio" data-title="Team Huddle — Cambrils UCF">
+            <img src="assets/images/trial-huddle.jpeg" alt="Trial huddle"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="150">
+          <a href="assets/images/action-control.jpeg" class="glightbox" data-gallery="portfolio" data-title="Joseph — Ball Control">
+            <img src="assets/images/action-control.jpeg" alt="Ball control"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <a href="assets/images/portrait-2.jpeg" class="glightbox" data-gallery="portfolio" data-title="Joseph Ojwang — Portrait 2">
+            <img src="assets/images/portrait-2.jpeg" alt="Portrait 2"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <a href="assets/images/trial-team.jpeg" class="glightbox" data-gallery="portfolio" data-title="Cambrils UCF — Team Photo">
+            <img src="assets/images/trial-team.jpeg" alt="Trial team photo"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="150">
+          <a href="assets/images/team-local.jpeg" class="glightbox" data-gallery="portfolio" data-title="Local Club — Team Photo">
+            <img src="assets/images/team-local.jpeg" alt="Local team photo"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <a href="assets/images/trial-certificate-2.jpeg" class="glightbox" data-gallery="portfolio" data-title="Trial Certificate 2">
+            <img src="assets/images/trial-certificate-2.jpeg" alt="Trial certificate 2"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="gallery-item break-inside-avoid overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <a href="assets/images/trial-gear.jpeg" class="glightbox" data-gallery="portfolio" data-title="Joseph in Cambrils gear">
+            <img src="assets/images/trial-gear.jpeg" alt="Trial gear"
+                 class="w-full object-cover" loading="lazy" />
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       SECTION 7 — THE DREAM
+  ════════════════════════════════════════ -->
+  <section id="dream" class="py-20 md:py-28 relative overflow-hidden"
+           style="background: linear-gradient(180deg, #0a0a0f 0%, #12091e 50%, #0a0a0f 100%);">
+
+    <!-- Subtle gold radial glow -->
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 50% 40%, rgba(255,215,0,0.05) 0%, transparent 60%);"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <!-- Header -->
+      <div data-aos="fade-up">
+        <p class="section-label mb-4">The Dream</p>
+        <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-4">
+          "Standing Where<br/><span class="text-gold">Legends Stood"</span>
+        </h2>
+        <p class="text-white/60 text-base sm:text-lg leading-relaxed mb-12 max-w-xl mx-auto">
+          Camp Nou. The ground where Messi lifted his Ballon d'Or trophies wearing the number that carries a generation of dreams — the #10. For Joseph, it is not just a jersey number. It is a north star.
+        </p>
+      </div>
+
+      <!-- Camp Nou photo -->
+      <div class="flex justify-center mb-8 relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="w-64 h-64 rounded-full" style="background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, transparent 70%); filter: blur(40px);"></div>
+        </div>
+        <img src="assets/images/campnou.jpeg" alt="Camp Nou — FC Barcelona"
+             class="relative z-10 max-w-xs w-full rounded-2xl shadow-2xl shadow-gold/10 object-cover"
+             loading="lazy" />
+      </div>
+
+      <!-- Caption -->
+      <p class="text-white/40 text-sm italic mb-12" data-aos="fade-up" data-aos-delay="300">
+        His #10 · Messi's #10 · The number that carries dreams
+      </p>
+
+      <!-- Kenyan trailblazers -->
+      <div class="glass-card p-6 sm:p-8 text-left" data-aos="fade-up" data-aos-delay="400">
+        <p class="section-label mb-4 text-center">Kenyan Trailblazers</p>
+        <p class="text-white/60 text-sm text-center mb-6">Proof the path exists</p>
+        <div class="space-y-4">
+
+          <div class="flex items-center gap-4">
+            <span class="text-gold font-bold text-sm w-40 flex-shrink-0">Victor Wanyama</span>
+            <div class="flex items-center gap-2 text-white/50 text-sm flex-wrap">
+              <span>Kenya</span>
+              <span class="text-gold">→</span>
+              <span>Belgium (age 16)</span>
+              <span class="text-gold">→</span>
+              <span>Celtic</span>
+              <span class="text-gold">→</span>
+              <span>Tottenham</span>
+            </div>
+          </div>
+
+          <div class="border-t border-white/5"></div>
+
+          <div class="flex items-center gap-4">
+            <span class="text-gold font-bold text-sm w-40 flex-shrink-0">McDonald Mariga</span>
+            <div class="flex items-center gap-2 text-white/50 text-sm flex-wrap">
+              <span>Kenya</span>
+              <span class="text-gold">→</span>
+              <span>Inter Milan</span>
+              <span class="text-gold">→</span>
+              <span>Serie A</span>
+            </div>
+          </div>
+
+          <div class="border-t border-white/5"></div>
+
+          <div class="flex items-center gap-4">
+            <span class="text-gold font-bold text-sm w-40 flex-shrink-0">Michael Olunga</span>
+            <div class="flex items-center gap-2 text-white/50 text-sm flex-wrap">
+              <span>Kenya</span>
+              <span class="text-gold">→</span>
+              <span>Girona (Spain)</span>
+              <span class="text-gold">→</span>
+              <span>J.League Golden Boot</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       SECTION 8 — CONTACT
+  ════════════════════════════════════════ -->
+  <section id="contact" class="bg-dark-light py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="section-label mb-3">Get in Touch</p>
+        <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-4">
+          Interested in <span class="text-gold">Joseph?</span>
+        </h2>
+        <p class="text-white/50 text-base max-w-lg mx-auto">
+          Reach out to Joseph's agent for trial arrangements, scouting reports, additional footage, or any enquiry.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+
+        <!-- Contact Form -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <form action="https://formsubmit.co/oluwamartin@gmail.com" method="POST" class="space-y-4">
+
+            <!-- FormSubmit hidden inputs -->
+            <input type="hidden" name="_subject" value="Scout Enquiry — Joseph Ojwang Portfolio" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+
+            <div data-aos="fade-up" data-aos-delay="150">
+              <label for="name" class="block text-white/60 text-sm mb-2 font-medium">Full Name *</label>
+              <input type="text" id="name" name="name" required
+                     class="w-full px-4 py-3 rounded-lg text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold/50 transition-colors"
+                     style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);"
+                     placeholder="Your full name" />
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200">
+              <label for="email" class="block text-white/60 text-sm mb-2 font-medium">Email Address *</label>
+              <input type="email" id="email" name="email" required
+                     class="w-full px-4 py-3 rounded-lg text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold/50 transition-colors"
+                     style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);"
+                     placeholder="your@email.com" />
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="250">
+              <label for="organisation" class="block text-white/60 text-sm mb-2 font-medium">Organisation / Club <span class="text-white/30">(optional)</span></label>
+              <input type="text" id="organisation" name="organisation"
+                     class="w-full px-4 py-3 rounded-lg text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold/50 transition-colors"
+                     style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);"
+                     placeholder="Club or scouting organisation" />
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300">
+              <label for="message" class="block text-white/60 text-sm mb-2 font-medium">Message *</label>
+              <textarea id="message" name="message" required rows="5"
+                        class="w-full px-4 py-3 rounded-lg text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold/50 transition-colors resize-none"
+                        style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);"
+                        placeholder="Tell us about the trial opportunity or your interest…"></textarea>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="350">
+              <button type="submit"
+                      class="w-full bg-gold text-dark font-bold py-3.5 px-6 rounded-lg hover:bg-gold-light transition-all duration-200 text-sm tracking-widest uppercase shadow-lg shadow-gold/20 hover:shadow-gold/30">
+                SEND ENQUIRY
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Direct contact card -->
+        <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="glass-card p-6 sm:p-8">
+            <p class="section-label mb-4">Direct Contact</p>
+            <h3 class="text-white font-bold text-lg mb-1">Martin Lugendo</h3>
+            <p class="text-white/50 text-sm mb-6">Player Agent · Joseph Ojwang</p>
+
+            <a href="mailto:oluwamartin@gmail.com"
+               class="flex items-center gap-3 text-gold hover:text-gold-light transition-colors group">
+              <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <span class="text-sm font-medium">oluwamartin@gmail.com</span>
+            </a>
+          </div>
+
+          <!-- What to expect -->
+          <div class="glass-card p-6">
+            <p class="section-label mb-4">What to Expect</p>
+            <ul class="space-y-3 text-white/60 text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">✓</span>
+                <span>Full session data and match analytics on request</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">✓</span>
+                <span>Reference contacts from Kitengela International coaching staff</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">✓</span>
+                <span>Cambrils UCF trial documentation available</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">✓</span>
+                <span>Available for trial arrangements in Europe (Summer 2026)</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="py-8 bg-dark border-t border-white/4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-white/30 text-sm">
+        © 2026 Joseph Ojwang · Player Portfolio · Represented by Martin Lugendo
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ════════════════════════════════════════
+       SCRIPTS
+  ════════════════════════════════════════ -->
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- GLightbox -->
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // 1. AOS
+      AOS.init({ duration: 700, once: true, offset: 80 });
+
+      // 2. Counter animation
+      const counters = document.querySelectorAll('.stat-number');
+      const counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseFloat(el.dataset.target);
+          const decimals = parseInt(el.dataset.decimals || '0', 10);
+          const duration = 1500;
+          const startTime = performance.now();
+
+          function easeOut(t) {
+            return 1 - Math.pow(1 - t, 3);
+          }
+
+          function tick(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const current = target * easeOut(progress);
+            el.textContent = current.toFixed(decimals);
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            } else {
+              el.textContent = target.toFixed(decimals);
+            }
+          }
+
+          requestAnimationFrame(tick);
+          counterObserver.unobserve(el);
+        });
+      }, { threshold: 0.3 });
+
+      counters.forEach(function (el) { counterObserver.observe(el); });
+
+      // 3. Progress bar animation
+      const progressBars = document.querySelectorAll('.progress-fill');
+      const progressObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          el.style.width = el.dataset.width;
+          progressObserver.unobserve(el);
+        });
+      }, { threshold: 0.3 });
+
+      progressBars.forEach(function (el) { progressObserver.observe(el); });
+
+      // 4. GLightbox
+      GLightbox({ touchNavigation: true, loop: true, skin: 'clean' });
+
+      // 5. Mobile menu toggle
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const mobileMenu   = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+
+      const HAMBURGER_PATH = 'M4 6h16M4 12h16M4 18h16';
+      const CLOSE_PATH     = 'M6 18L18 6M6 6l12 12';
+
+      hamburgerBtn.addEventListener('click', function () {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.querySelector('path').setAttribute('d', HAMBURGER_PATH);
+        } else {
+          mobileMenu.classList.remove('hidden');
+          hamburgerIcon.querySelector('path').setAttribute('d', CLOSE_PATH);
+        }
+      });
+
+      // Close mobile menu on nav link click
+      document.querySelectorAll('.nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.querySelector('path').setAttribute('d', HAMBURGER_PATH);
+        });
+      });
+
+    });
+  </script>
+
+</body>
+</html>
