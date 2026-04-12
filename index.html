@@ -122,6 +122,63 @@
     /* ── Stat number ── */
     .stat-number { font-family: 'Oswald', sans-serif; }
 
+    /* ── Phone mockup ── */
+    .phone-mockup {
+      position: relative;
+      width: 180px;
+      border-radius: 24px;
+      border: 3px solid rgba(255,255,255,0.15);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 40px rgba(255,215,0,0.08);
+      overflow: hidden;
+      transform: perspective(800px) rotateY(-6deg) rotateX(2deg);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      flex-shrink: 0;
+    }
+    .phone-mockup:hover {
+      transform: perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.04);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(255,215,0,0.15);
+    }
+    .phone-mockup img {
+      width: 100%;
+      display: block;
+    }
+    .phone-mockup::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 24px;
+      background: #0a0a0f;
+      border-radius: 24px 24px 0 0;
+      z-index: 2;
+    }
+    .phone-mockup::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 5px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      z-index: 3;
+    }
+    @media (max-width: 768px) {
+      .phone-mockup {
+        width: 140px;
+        transform: perspective(800px) rotateY(-3deg) rotateX(1deg);
+      }
+    }
+
+    /* ── Verified badge pulse ── */
+    @keyframes verifiedPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.3); }
+      50%      { box-shadow: 0 0 0 8px rgba(255,215,0,0); }
+    }
+    .verified-badge {
+      animation: verifiedPulse 2.5s ease-in-out infinite;
+    }
+
   </style>
 </head>
 
@@ -476,38 +533,60 @@
           <span class="text-xs text-white/40 border border-white/10 rounded-full px-3 py-1">352 total touches</span>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <!-- Left foot -->
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-white/70 text-sm font-medium">Left Foot</span>
-              <span class="text-white font-semibold text-sm">117 touches · 33%</span>
-            </div>
-            <div class="w-full bg-white/5 rounded-full h-2 mb-2">
-              <div class="progress-fill bg-white/40 h-2 rounded-full" style="width: 0%;" data-width="33%"></div>
-            </div>
-            <p class="text-white/40 text-xs">76.7 kph kick power</p>
-          </div>
-          <!-- Right foot -->
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <div class="flex items-center gap-2">
-                <span class="text-white/70 text-sm font-medium">Right Foot</span>
-                <span class="bg-gold/20 text-gold text-xs px-2 py-0.5 rounded-full font-semibold">DOMINANT</span>
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <!-- Stats column -->
+          <div class="flex-1 min-w-0">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <!-- Left foot -->
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-white/70 text-sm font-medium">Left Foot</span>
+                  <span class="text-white font-semibold text-sm">117 touches · 33%</span>
+                </div>
+                <div class="w-full bg-white/5 rounded-full h-2 mb-3">
+                  <div class="progress-fill bg-white/40 h-2 rounded-full" style="width: 0%;" data-width="33%"></div>
+                </div>
+                <div class="space-y-1">
+                  <p class="text-white/40 text-xs">76.7 kph kick power</p>
+                  <p class="text-white/40 text-xs">26 releases · 22%</p>
+                </div>
               </div>
-              <span class="text-white font-semibold text-sm">235 touches · 67%</span>
+              <!-- Right foot -->
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-white/70 text-sm font-medium">Right Foot</span>
+                    <span class="bg-gold/20 text-gold text-xs px-2 py-0.5 rounded-full font-semibold">DOMINANT</span>
+                  </div>
+                  <span class="text-white font-semibold text-sm">235 touches · 67%</span>
+                </div>
+                <div class="w-full bg-white/5 rounded-full h-2 mb-3">
+                  <div class="progress-fill bg-gold h-2 rounded-full" style="width: 0%;" data-width="67%"></div>
+                </div>
+                <div class="space-y-1">
+                  <p class="text-white/40 text-xs">79.2 kph kick power</p>
+                  <p class="text-white/40 text-xs">90 releases · 78%</p>
+                </div>
+              </div>
             </div>
-            <div class="w-full bg-white/5 rounded-full h-2 mb-2">
-              <div class="progress-fill bg-gold h-2 rounded-full" style="width: 0%;" data-width="67%"></div>
-            </div>
-            <p class="text-white/40 text-xs">79.2 kph kick power</p>
-          </div>
-        </div>
 
-        <div class="mt-6 p-4 bg-gold/5 border border-gold/10 rounded-lg">
-          <p class="text-white/70 text-sm leading-relaxed">
-            <span class="text-gold font-semibold">3% drop-off between feet</span> — exceptionally low. The typical youth player shows a 15–20% performance drop on their weaker foot. Joseph's near-parity is a key marker of genuine two-footedness.
-          </p>
+            <div class="mt-6 p-4 bg-gold/5 border border-gold/10 rounded-lg">
+              <p class="text-white/70 text-sm leading-relaxed">
+                <span class="text-gold font-semibold">3% drop-off between feet</span> — exceptionally low. The typical youth player shows a 15–20% performance drop on their weaker foot. Joseph's near-parity is a key marker of genuine two-footedness.
+              </p>
+            </div>
+          </div>
+
+          <!-- Phone screenshot -->
+          <div class="flex flex-col items-center gap-3 self-center" data-aos="fade-left" data-aos-delay="300">
+            <div class="phone-mockup">
+              <img src="assets/images/stats-twofooted.jpeg" alt="Live session data — Two-footed performance breakdown" loading="lazy" />
+            </div>
+            <div class="verified-badge flex items-center gap-1.5 bg-gold/10 border border-gold/20 rounded-full px-3 py-1">
+              <svg class="w-3 h-3 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span class="text-gold text-[10px] font-semibold tracking-wider uppercase">Verified Session Data</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -538,21 +617,54 @@
       <!-- Agility row -->
       <div class="glass-card p-6 sm:p-8 mb-8" data-aos="fade-up" data-aos-delay="100">
         <h3 class="text-white font-bold text-lg mb-6">Agility — Directional Turns</h3>
-        <div class="grid grid-cols-3 gap-4 text-center">
-          <div>
-            <p class="text-3xl mb-1">↰</p>
-            <p class="stat-number text-4xl font-black text-gold mb-1" data-target="19" data-decimals="0">0</p>
-            <p class="text-white/50 text-xs">Left Turns</p>
+
+        <div class="flex flex-col-reverse md:flex-row gap-8 items-start">
+          <!-- Phone screenshot -->
+          <div class="flex flex-col items-center gap-3 self-center" data-aos="fade-right" data-aos-delay="300">
+            <div class="phone-mockup">
+              <img src="assets/images/stats-agility.jpeg" alt="Live session data — Agility performance breakdown" loading="lazy" />
+            </div>
+            <div class="verified-badge flex items-center gap-1.5 bg-gold/10 border border-gold/20 rounded-full px-3 py-1">
+              <svg class="w-3 h-3 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span class="text-gold text-[10px] font-semibold tracking-wider uppercase">Verified Session Data</span>
+            </div>
           </div>
-          <div>
-            <p class="text-3xl mb-1">↩</p>
-            <p class="stat-number text-4xl font-black text-gold mb-1" data-target="26" data-decimals="0">0</p>
-            <p class="text-white/50 text-xs">Back Turns</p>
-          </div>
-          <div>
-            <p class="text-3xl mb-1">↱</p>
-            <p class="stat-number text-4xl font-black text-gold mb-1" data-target="23" data-decimals="0">0</p>
-            <p class="text-white/50 text-xs">Right Turns</p>
+
+          <!-- Stats column -->
+          <div class="flex-1 min-w-0">
+            <div class="grid grid-cols-3 gap-4 text-center mb-8">
+              <div>
+                <p class="text-3xl mb-1">↰</p>
+                <p class="stat-number text-4xl font-black text-gold mb-1" data-target="19" data-decimals="0">0</p>
+                <p class="text-white/50 text-xs">Left Turns</p>
+              </div>
+              <div>
+                <p class="text-3xl mb-1">↩</p>
+                <p class="stat-number text-4xl font-black text-gold mb-1" data-target="26" data-decimals="0">0</p>
+                <p class="text-white/50 text-xs">Back Turns</p>
+              </div>
+              <div>
+                <p class="text-3xl mb-1">↱</p>
+                <p class="stat-number text-4xl font-black text-gold mb-1" data-target="23" data-decimals="0">0</p>
+                <p class="text-white/50 text-xs">Right Turns</p>
+              </div>
+            </div>
+
+            <!-- Additional agility metrics -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg p-4 text-center">
+                <p class="stat-number text-3xl font-black text-white mb-1" data-target="5" data-decimals="0">0</p>
+                <p class="text-white/50 text-xs">Intense Turns</p>
+              </div>
+              <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg p-4 text-center">
+                <p class="stat-number text-3xl font-black text-white mb-1" data-target="11.9" data-decimals="1">0</p>
+                <p class="text-white/50 text-xs">Avg Entry Speed (kph)</p>
+              </div>
+              <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg p-4 text-center">
+                <p class="stat-number text-3xl font-black text-white mb-1" data-target="6.8" data-decimals="1">0</p>
+                <p class="text-white/50 text-xs">Avg Exit Speed (kph)</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
