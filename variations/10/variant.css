@@ -1,0 +1,125 @@
+/* 10 60-Second Scout: minimal white, black and signal red; a six-step briefing the viewer controls. */
+
+.v10 {
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --muted: #5c5c5c;
+  --surface: #fafafa;
+  --surface-2: #efefef;
+  --line: rgb(10 10 10 / 0.12);
+  --accent: #d0170a;
+  --signal: #ff2a1a;
+  --accent-ink: #ffffff;
+  --accent-2: #0a0a0a;
+  --focus: #d0170a;
+  --font-display: "Geist", system-ui, sans-serif;
+  --font-body: "Geist", system-ui, sans-serif;
+  --radius: 8px;
+}
+.v10 .design-bar { background: #0a0a0a; }
+.v10 .site-header { background: rgb(255 255 255 / 0.9); }
+.v10 .brand span { color: var(--signal); }
+.v10 h1, .v10 h2 { font-weight: 600; letter-spacing: -0.03em; }
+.v10 .idline span { border-radius: 4px; }
+
+/* Hero: identity on the left, the briefing on the right */
+.hero--brief { max-width: 1400px; margin: 0 auto; }
+.brief-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 1rem; padding-bottom: 0.75rem; margin-bottom: clamp(1rem, 2vw, 2rem); border-bottom: 1px solid var(--fg); }
+.brief-top .kicker { margin: 0; display: inline-flex; align-items: center; gap: 0.5rem; }
+.brief-top .kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--signal); }
+.brief-top .stamp { margin: 0; }
+.brief-grid { display: grid; gap: clamp(1.5rem, 1rem + 3vw, 4rem); }
+.brief-id { display: grid; gap: 0 1.25rem; grid-template-columns: minmax(96px, 30%) 1fr; align-items: end; }
+.brief-photo { grid-row: 1 / span 1; }
+.brief-photo img { aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 15%; border-radius: var(--radius); }
+.v10 .hero h1 { font-size: clamp(2.2rem, 1.2rem + 4vw, 5.2rem); line-height: 0.95; margin: 0; }
+.v10 .n-middle { color: var(--muted); font-weight: 400; }
+.brief-id .idline, .brief-id .cta-row { grid-column: 1 / -1; }
+.brief-id .idline { margin-top: 1.25rem; }
+@media (min-width: 921px) {
+  .brief-grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: start; }
+  .brief-id { grid-template-columns: minmax(140px, 38%) 1fr; }
+}
+
+/* Steps: listed without JS, one at a time with JS */
+.brief-steps { position: relative; }
+.steps { display: grid; gap: 0.75rem; counter-reset: s; }
+.step { padding: 1.1rem 1.25rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.step-no { margin-bottom: 0.4rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); }
+.step h2 { font-size: var(--step-2); margin-bottom: 0.5rem; }
+.step-link { font-weight: 600; }
+.step-link::after { content: " →"; }
+
+.is-stepper .steps { display: block; }
+.is-stepper .step {
+  position: relative;
+  min-height: 260px;
+  padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  border: 1px solid var(--fg);
+  background: var(--bg);
+}
+.is-stepper .step::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  height: 4px;
+  background: var(--signal);
+  transform-origin: 0 50%;
+  transform: scaleX(var(--step-progress, 0.1667));
+  transition: transform 450ms var(--ease-out);
+}
+.is-stepper .step h2 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.4rem); }
+.is-stepper .step p { font-size: var(--step-1); line-height: 1.4; }
+.is-stepper .step-no, .is-stepper .step-link { font-size: 0.85rem; }
+.motion-ready .is-stepper .step.is-current { animation: rise 420ms var(--ease-out) both; }
+
+.step-dots { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+.step-dot {
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+.step-dot[aria-current="step"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.step-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 0.75rem; order: 2; }
+.brief-steps.is-stepper { display: flex; flex-direction: column; }
+.brief-steps.is-stepper .steps { order: 1; }
+.brief-steps.is-stepper .step-nav { order: 2; }
+.brief-steps.is-stepper .fine { order: 3; margin-top: 0.5rem; }
+.step-btn { min-height: 48px; padding: 0 1.25rem; border: 1px solid var(--fg); border-radius: 999px; background: var(--bg); font-weight: 600; }
+.step-btn[data-step-next] { background: var(--fg); color: var(--bg); }
+.step-btn:disabled { opacity: 0.4; cursor: default; }
+.step-count { margin: 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+
+/* Sections: quiet executive report */
+.v10 .sec { border-top: 1px solid var(--line); }
+.v10 .sec-head { display: grid; grid-template-columns: auto 1fr; gap: 0 1rem; align-items: baseline; max-width: none; }
+.v10 .sec-kicker { margin: 0; color: var(--accent); font-size: 0.9rem; }
+.v10 .sec-head h2 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.4rem); }
+.v10 .lede { grid-column: 2; max-width: 60ch; margin-top: 0.5rem; font-size: var(--step-0); }
+.v10 .caveat { border-left-color: var(--signal); background: #fff6f5; }
+.v10 .stat-grid { border-radius: var(--radius); }
+.v10 .stat-value { font-weight: 600; }
+.v10 .bar--l .bar-fill { background: var(--fg); }
+.v10 .bar--r .bar-fill { background: var(--signal); }
+.v10 .trait { background: var(--bg); }
+.v10 .rep-card { background: #0a0a0a; }
+.v10 .rep-card .ticks li::before { color: var(--signal); }
+.v10 .site-footer { background: #0a0a0a; }
+
+@media (max-width: 600px) {
+  .brief-id { grid-template-columns: minmax(84px, 28%) 1fr; }
+  .brief-top .stamp { font-size: 0.7rem; }
+  .step-dots { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 0.25rem; }
+  .brief-steps.is-stepper .step-nav { order: 1; margin: 0 0 0.65rem; }
+  .brief-steps.is-stepper .steps { order: 2; }
+  .is-stepper .step { min-height: 190px; padding: 1.15rem; }
+  .is-stepper .step h2 { font-size: 1.9rem; }
+  .is-stepper .step p { font-size: 1rem; }
+  .step-btn { padding-inline: 0.9rem; }
+}

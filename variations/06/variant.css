@@ -1,0 +1,123 @@
+/* 06 Bilateral: cobalt and coral on dark; left and right measured side by side, always with the caveat. */
+
+.v06 {
+  --bg: #0b0d16;
+  --fg: #eef0f8;
+  --muted: #a3a8be;
+  --surface: #121526;
+  --surface-2: #1c2138;
+  --line: rgb(238 240 248 / 0.13);
+  --accent: #ff6a4d;
+  --accent-ink: #0b0d16;
+  --accent-2: #4b6bff;
+  --cobalt: #2448ff;
+  --focus: #ffd34d;
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-body: "Geist", system-ui, sans-serif;
+  --radius: 14px;
+  color-scheme: dark;
+}
+body.v06::before {
+  content: "";
+  position: fixed;
+  inset: 0 auto 0 50%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgb(238 240 248 / 0.08) 20%, rgb(238 240 248 / 0.08) 80%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+.v06 main, .v06 .site-footer { position: relative; z-index: 1; }
+.v06 .design-bar { background: #05060b; color: var(--fg); }
+.v06 .site-header { background: rgb(11 13 22 / 0.85); }
+.v06 h1, .v06 h2 { font-stretch: 90%; font-weight: 800; }
+.v06 .btn--ghost { border-color: var(--fg); }
+
+/* Hero: split field */
+.hero--split { display: grid; gap: 1.5rem; overflow: hidden; isolation: isolate; padding-block: clamp(1.5rem, 1rem + 4vw, 5rem); }
+.split-bg { position: absolute; inset: 0; z-index: -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); overflow: hidden; }
+.split-l, .split-r {
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(4rem, 2rem + 10vw, 13rem);
+  line-height: 0.8;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.035);
+}
+.split-l { background: linear-gradient(160deg, #1a2f9e 0%, #0b0d16 75%); }
+.split-r { justify-content: flex-end; background: linear-gradient(200deg, #9a3424 0%, #0b0d16 75%); }
+.split-photo { justify-self: center; width: min(100%, 460px); }
+.split-photo img { aspect-ratio: 4 / 3; max-height: 40vh; object-fit: cover; object-position: 50% 14%; border-radius: var(--radius); box-shadow: -18px 0 0 -6px var(--cobalt), 18px 0 0 -6px var(--accent); }
+.split-copy { max-width: 640px; }
+.v06 .hero h1 { font-size: clamp(2.8rem, 1.4rem + 5.5vw, 6.8rem); line-height: 0.88; }
+.v06 .n-first { color: #b9c6ff; }
+.v06 .n-last { color: #ffc2b5; }
+.v06 .kicker { color: var(--muted); }
+.split-caveat { max-width: 56ch; margin: 0.85rem 0 0; padding: 0.75rem 0.9rem; border-left: 3px solid var(--accent); background: rgb(11 13 22 / 0.78); color: #e4e7f2; font-size: 0.92rem; }
+.split-meter { display: flex; height: 44px; margin: 1.5rem 0 0.5rem; border-radius: 999px; overflow: hidden; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500; }
+.split-meter span { display: flex; align-items: center; padding: 0 1rem; width: var(--w); transform-origin: 100% 50%; transition: transform 1100ms var(--ease-out); }
+.sm-l { background: var(--cobalt); color: #fff; }
+.sm-r { justify-content: flex-end; background: var(--accent); color: var(--accent-ink); transform-origin: 0 50% !important; }
+.motion-ready .split-copy:not(.is-in) .split-meter span { transform: scaleX(0); }
+.split-note { font-size: 0.85rem; color: var(--muted); }
+@media (min-width: 921px) {
+  .hero--split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; min-height: min(82vh, 820px); }
+  .split-copy { grid-column: 1; grid-row: 1; padding-right: 2rem; }
+  .split-photo { grid-column: 2; grid-row: 1; }
+  .split-photo img { aspect-ratio: 4 / 5; max-height: 70vh; }
+}
+@media (min-width: 921px) and (max-width: 1100px) {
+  .hero--split { padding-block: 2rem; }
+}
+
+/* Sections centred on the seam */
+.v06 .sec-head { margin-inline: auto; text-align: center; }
+.v06 .sec-kicker { display: inline-flex; gap: 0.5rem; color: var(--muted); }
+.v06 .sec-kicker::before { content: ""; width: 10px; height: 10px; margin-top: 0.3rem; border-radius: 50%; background: linear-gradient(90deg, var(--cobalt) 50%, var(--accent) 50%); }
+.v06 .sec-head h2 { font-size: clamp(2.2rem, 1.4rem + 3vw, 4.4rem); }
+
+/* Paired measurements take centre stage */
+.v06 .caveat { margin-inline: auto; background: var(--surface); border-left: 0; border-top: 4px solid; border-image: linear-gradient(90deg, var(--cobalt), var(--accent)) 1; }
+.v06 .data-split { grid-template-columns: minmax(0, 1fr); }
+.v06 .pairs-wrap { padding: clamp(1rem, 0.5rem + 2vw, 2.5rem); border-radius: var(--radius); background: var(--surface); }
+.v06 .pairs-wrap h3 { margin-top: 0; text-align: center; }
+.v06 .pairs { gap: 1.75rem; }
+.v06 .pair-label { text-align: center; font-size: 1.05rem; }
+.v06 .pair-bars { height: 26px; gap: 4px; }
+.v06 .bar { border-radius: 999px; background: var(--surface-2); }
+.v06 .bar--l .bar-fill { background: linear-gradient(270deg, var(--cobalt), #6f8bff); border-radius: 999px; }
+.v06 .bar--r .bar-fill { background: linear-gradient(90deg, var(--accent), #ffa48f); border-radius: 999px; }
+.v06 .pair-val { font-size: 1rem; }
+.v06 .pair-val--l { color: #b9c6ff; }
+.v06 .pair-val--r { color: #ffc2b5; }
+.v06 .stat { background: var(--surface); }
+.v06 .stat:nth-child(odd) .stat-value { color: #b9c6ff; }
+.v06 .stat:nth-child(even) .stat-value { color: #ffc2b5; }
+.v06 .turn { background: var(--surface); }
+.v06 .trait { background: var(--surface); }
+.v06 .trait:nth-child(odd) { border-top: 3px solid var(--cobalt); }
+.v06 .trait:nth-child(even) { border-top: 3px solid var(--accent); }
+.v06 .rep-card { background: linear-gradient(135deg, var(--cobalt), #9a3424); color: #fff; }
+.v06 .rep-card .ticks li::before { color: #fff; }
+.v06 .field input, .v06 .field textarea { background: var(--surface); }
+.v06 .chip { background: var(--surface); color: var(--fg); }
+.v06 .chip[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.v06 .site-footer { background: #05060b; color: var(--fg); }
+
+@media (max-width: 920px) {
+  .split-copy { display: flex; flex-direction: column; }
+  .split-meter, .split-note { order: 5; }
+  .split-photo img { max-height: 30vh; }
+}
+@media (max-width: 600px) {
+  .split-bg { display: none; }
+  .split-photo img { max-height: 24vh; }
+  .v06 .hero h1 { font-size: clamp(2.1rem, 1rem + 6vw, 3rem); }
+  .hero--split { gap: 1rem; padding-top: 1rem; }
+}
+@media (max-width: 360px) {
+  .split-photo img { max-height: 20vh; }
+  .split-caveat { padding-block: 0.55rem; font-size: 0.86rem; }
+}
