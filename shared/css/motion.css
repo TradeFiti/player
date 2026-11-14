@@ -1,0 +1,83 @@
+/*
+  Motion contract
+  - Without JS, or before app.js finishes init, everything is visible and static.
+  - app.js adds .motion-ready to <html> only when motion is allowed (no reduced motion, no Save-Data, not paused).
+  - Every hidden or offset starting state below is scoped to .motion-ready.
+  - .motion-paused (Pause motion button) and .motion-hidden (tab hidden) stop running animations.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  html.motion-ready { scroll-behavior: smooth; }
+}
+
+/* Reveal on scroll */
+.motion-ready [data-reveal] {
+  transition:
+    opacity var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out),
+    clip-path var(--dur) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.motion-ready [data-reveal]:not(.is-in) {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+}
+
+/* Paired bars grow from the centre line once revealed */
+.motion-ready [data-reveal]:not(.is-in) .bar-fill { transform: scaleX(0); }
+
+/* SVG strokes draw in (pitch lines, route line) */
+.motion-ready .draw { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset 1600ms var(--ease-in-out); }
+.motion-ready [data-reveal]:not(.is-in) .draw { stroke-dashoffset: 1; }
+
+/* Pointer lighting: a soft spotlight that follows the pointer, set by app.js */
+[data-pointer-light] { --mx: 50%; --my: 30%; }
+.motion-ready [data-pointer-light]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(520px circle at var(--mx) var(--my), var(--light, rgb(255 255 255 / 0.10)), transparent 60%);
+  z-index: 1;
+}
+
+/* Parallax offsets are written by app.js as --py */
+.motion-ready [data-parallax] { transform: translate3d(0, var(--py, 0px), 0); will-change: transform; }
+
+/* Gentle one-shot entrance for the hero */
+@keyframes rise { from { opacity: 0.62; transform: translate3d(0, 18px, 0); } to { opacity: 1; transform: none; } }
+@keyframes wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+.motion-ready .hero h1 { animation: rise 900ms var(--ease-out) both; }
+.motion-ready .hero .cta-row { animation: rise 900ms 120ms var(--ease-out) both; }
+
+/* Stopping states. The user pause freezes ambient/looping motion, but essential
+   hero content is forced to its final visible state. Hidden tabs do not pause
+   finite entrance animations: pausing during their first frame can strand
+   headings at opacity: 0 when a page opens in a background tab. */
+.motion-paused *, .motion-paused *::before, .motion-paused *::after {
+  animation-play-state: paused !important;
+}
+.motion-paused .hero h1,
+.motion-paused .hero .cta-row {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+.motion-paused [data-parallax] { transform: none !important; }
+
+/* Reduced motion and Save-Data: no smooth scroll, no parallax, no loops, all content shown. */
+.motion-reduced, .save-data { scroll-behavior: auto; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  [data-parallax] { transform: none !important; }
+  .draw { stroke-dashoffset: 0 !important; }
+}

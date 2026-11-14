@@ -1,0 +1,143 @@
+/* 05 Proof of Play: monochrome documentary archive, contact strips, certificate blue, evidence timeline. */
+
+.v05 {
+  --bg: #ebe9e4;
+  --fg: #141414;
+  --muted: #55534f;
+  --surface: #f6f5f1;
+  --surface-2: #dcd9d2;
+  --line: rgb(20 20 20 / 0.18);
+  --accent: #1f4fbf;
+  --accent-ink: #ffffff;
+  --accent-2: #141414;
+  --focus: #1f4fbf;
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "Newsreader", Georgia, serif;
+  --radius: 2px;
+  --radius-sm: 2px;
+}
+.v05 .design-bar { background: #141414; }
+.v05 body, body.v05 { font-size: 1.08rem; }
+.v05 .site-nav a, .v05 .btn, .v05 .chip, .v05 .field label, .v05 .stat-label { font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.02em; }
+.v05 .btn { border-radius: 2px; text-transform: uppercase; }
+
+/* Hero: evidence file */
+.hero--archive { max-width: 1400px; margin: 0 auto; }
+.archive-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: clamp(1.25rem, 2vw, 2.5rem);
+  border: 1px solid var(--fg);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: repeating-linear-gradient(135deg, transparent 0 8px, rgb(20 20 20 / 0.04) 8px 9px);
+}
+.archive-head p { margin: 0; }
+.archive-grid { display: grid; gap: clamp(1.5rem, 1rem + 3vw, 4rem); }
+.archive-copy { order: 2; }
+.contact-strip { order: 1; }
+@media (min-width: 921px) {
+  .archive-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; }
+  .archive-copy { order: 0; }
+}
+.v05 .hero h1 { font-weight: 400; font-size: clamp(2.8rem, 1.4rem + 5vw, 6.4rem); letter-spacing: -0.03em; }
+.v05 .n-middle { font-style: italic; }
+.v05 .kicker { display: inline-block; padding: 0.25rem 0.6rem; border: 2px solid var(--accent); color: var(--accent); font-weight: 500; }
+.archive-lede { font-size: var(--step-1); font-style: italic; max-width: 36ch; }
+
+.contact-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  padding: 22px 8px;
+  background:
+    radial-gradient(circle, #ebe9e4 3px, transparent 3.5px) 0 5px / 18px 12px repeat-x,
+    radial-gradient(circle, #ebe9e4 3px, transparent 3.5px) 0 calc(100% - 5px) / 18px 12px repeat-x,
+    #111;
+}
+.contact-strip figure { position: relative; }
+.contact-strip img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 18%; filter: grayscale(1) contrast(1.1); transition: filter 400ms; }
+.contact-strip li:first-child img { filter: none; }
+.contact-strip li:hover img { filter: none; }
+.contact-strip figcaption { padding-top: 0.35rem; color: #f0eee8; font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.4; }
+.contact-strip figcaption span { display: block; color: #8fb0ff; }
+@media (min-width: 921px) {
+  .contact-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 26px 12px; }
+  .contact-strip img { aspect-ratio: 4 / 5; }
+}
+@media (max-width: 520px) {
+  .contact-strip { grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr)); }
+}
+
+/* Sections: archive folders */
+.v05 .sec { border-top: 1px solid var(--fg); }
+.v05 .sec-kicker { display: inline-block; padding: 0.2rem 0.55rem; background: var(--accent); color: var(--accent-ink); }
+.v05 .sec-head h2 { font-weight: 400; font-size: clamp(2.2rem, 1.4rem + 3vw, 4.2rem); letter-spacing: -0.02em; }
+.v05 .trial-item img, .v05 .g-link img, .v05 .screens img { filter: grayscale(1); border: 6px solid #111; transition: filter 400ms; }
+.v05 .trial-item a:hover img, .v05 .g-link:hover img, .v05 .g-link:focus-visible img, .v05 .screens a:hover img { filter: none; }
+.v05 .g-cap, .v05 .cap { font-family: var(--font-mono); font-size: 0.72rem; }
+.v05 .trait { border-radius: 0; border-style: dashed; }
+.v05 .stat { background: var(--surface); }
+.v05 .stat-value { font-weight: 400; }
+.v05 .bar--l .bar-fill { background: #141414; }
+.v05 .bar--r .bar-fill { background: var(--accent); }
+
+/* Evidence timeline */
+.timeline-wrap { margin-top: clamp(2rem, 1rem + 3vw, 4rem); padding: clamp(1.25rem, 1rem + 1vw, 2rem); background: var(--surface); border: 1px solid var(--line); }
+.timeline-wrap h3 { margin-top: 0; }
+.v05 .timeline { border-left: 0; padding-left: 2rem; }
+.v05 .timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  background: var(--accent);
+  transform-origin: 50% 0;
+}
+.v05 .tl-item::before { left: -2rem; width: 12px; height: 12px; border: 2px solid var(--accent); background: var(--surface); }
+.v05 .tl-item time { color: var(--accent); }
+.motion-ready .v05 .timeline::before { transition: transform 1400ms var(--ease-in-out); }
+.motion-ready .v05 .timeline:not(:has(.is-in))::before { transform: scaleY(0); }
+
+.v05 .rep-card { background: #141414; color: #ebe9e4; border-left: 8px solid var(--accent); }
+.v05 .rep-card .ticks li::before { color: #8fb0ff; }
+.v05 .prov dt::before { content: "▣ "; color: var(--accent); }
+.v05 .site-footer { background: #141414; }
+
+@media (max-width: 920px) {
+  .archive-head p:last-child { display: none; }
+  .archive-head { margin-bottom: 1rem; }
+  .contact-strip { padding: 16px 6px; }
+  .contact-strip figcaption { font-size: 0.7rem; }
+  .contact-strip figcaption span ~ * { display: none; }
+  .v05 .hero h1 { font-size: clamp(2.2rem, 1rem + 6vw, 3.6rem); }
+  .archive-grid { gap: 1rem; }
+}
+@media (max-width: 600px) {
+  .contact-strip img { max-height: 19vh; }
+  .hero--archive { padding-top: 1rem; }
+  .contact-strip figcaption { font-size: 0.66rem; }
+  .contact-strip figcaption span { font-size: 0.66rem; }
+}
+@media (min-width: 921px) and (max-height: 820px) {
+  .v05 .hero h1 { font-size: clamp(2.4rem, 1rem + 3.4vw, 4.8rem); }
+}
+@media (max-width: 360px) {
+  .contact-strip { padding: 8px 4px; }
+  .contact-strip img { max-height: 16vh; }
+  .contact-strip figcaption {
+    height: 1.25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.68rem;
+  }
+  .contact-strip figcaption span { font-size: 0.68rem; }
+}

@@ -1,0 +1,161 @@
+{
+  "updated": "2026-11-14",
+  "player": {
+    "full_name": "Joseph Omondi Ojwang",
+    "first": "Joseph",
+    "middle": "Omondi",
+    "last": "Ojwang",
+    "dob": "2010-09-13",
+    "nationality": "Kenyan",
+    "position": "Attacking Midfielder",
+    "number": "#10",
+    "foot": "Uses both feet; right foot dominant in the recorded session",
+    "school": "Kitengela International School",
+    "school_year": "Year 10",
+    "location": "Kitengela, Kenya"
+  },
+  "representative": {
+    "name": "Martin Lugendo",
+    "role": "Representative",
+    "email": "oluwamartin@gmail.com"
+  },
+  "summary": [
+    "Joseph Omondi Ojwang is a Kenyan attacking midfielder who wears #10 and studies in Year 10 at Kitengela International School.",
+    "This profile gathers his footage, photographs from matches and training, documentation of his trial participation with Cambrils UCF in Catalonia, Spain, and the figures from one recorded technical training session. Enquiries go to his representative, Martin Lugendo."
+  ],
+  "traits": [
+    {
+      "id": "both-feet",
+      "title": "Use of both feet",
+      "prompt": "Watch which foot he receives and releases with in the clips.",
+      "evidence": [
+        {"label": "Session touches: 117 left, 235 right", "href": "#data"},
+        {"label": "Clip 02 (landscape)", "href": "#clip-02"}
+      ]
+    },
+    {
+      "id": "carrying",
+      "title": "Carrying the ball through midfield",
+      "prompt": "Match photographs show him driving forward with the ball and taking on defenders.",
+      "evidence": [
+        {"label": "Match photo: carrying through midfield", "href": "#photo-joseph-match-carry"},
+        {"label": "Match photo: taking on a defender", "href": "#photo-joseph-match-dribble-2"}
+      ]
+    },
+    {
+      "id": "turning",
+      "title": "Receiving and turning",
+      "prompt": "The session tracker recorded turns in every direction.",
+      "evidence": [
+        {"label": "Session turns: 19 left, 23 right, 26 back", "href": "#data"},
+        {"label": "Clip 04 (landscape)", "href": "#clip-04"}
+      ]
+    },
+    {
+      "id": "volume",
+      "title": "Work across a long session",
+      "prompt": "Distance and sprint counts come from the same 149-minute session.",
+      "evidence": [
+        {"label": "Session: 4.9 km, 33 sprints", "href": "#data"},
+        {"label": "Clip 06 (landscape)", "href": "#clip-06"}
+      ]
+    }
+  ],
+  "trial": {
+    "club": "Cambrils UCF",
+    "place": "Cambrils, Catalonia, Spain",
+    "summary": "Joseph took part in a trial with Cambrils UCF in Cambrils, Catalonia, Spain, arranged through Kitengela International School. A participation certificate and photographs from the trial are shown below.",
+    "note": "This page documents participation only. It does not describe an assessment, outcome or offer."
+  },
+  "session": {
+    "date": "20 August 2025",
+    "minutes": 149,
+    "caveat": "All figures come from one 149-minute technical session recorded on a wearable tracker on 20 August 2025. They are not match data and are not compared with academy, age-group or other players' figures.",
+    "headline": [
+      {"key": "touches", "label": "Ball touches", "value": "352", "unit": ""},
+      {"key": "kick", "label": "Top kicking power", "value": "79.2", "unit": "kph"},
+      {"key": "speed", "label": "Top speed", "value": "24.5", "unit": "kph"},
+      {"key": "sprints", "label": "Sprints", "value": "33", "unit": ""},
+      {"key": "distance", "label": "Total distance", "value": "4.9", "unit": "km"},
+      {"key": "sprintdist", "label": "Sprint distance", "value": "142.2", "unit": "m"},
+      {"key": "accel", "label": "Accelerations / decelerations", "value": "29", "unit": ""},
+      {"key": "minutes", "label": "Session duration", "value": "149", "unit": "min"}
+    ],
+    "pairs": [
+      {"label": "Touches", "left": 117, "right": 235, "unit": ""},
+      {"label": "Kicking power", "left": 76.7, "right": 79.2, "unit": "kph"},
+      {"label": "Releases", "left": 26, "right": 90, "unit": ""},
+      {"label": "Turns", "left": 19, "right": 23, "unit": ""}
+    ],
+    "turns": [
+      {"label": "Left turns", "value": "19"},
+      {"label": "Right turns", "value": "23"},
+      {"label": "Back turns", "value": "26"},
+      {"label": "Intense turns", "value": "5"},
+      {"label": "Average entry speed", "value": "11.9 kph"},
+      {"label": "Average exit speed", "value": "6.8 kph"}
+    ],
+    "screens": ["stats-overview", "stats-speed", "stats-twofooted", "stats-twofeet", "stats-agility"]
+  },
+  "videos": [
+    {"id": "13", "orientation": "portrait", "duration": "0:31", "title": "Start here: player introduction", "description": "Direct-to-camera introduction showing Joseph in a white football shirt. Use this clip first to identify him in the supplied footage."},
+    {"id": "11", "orientation": "portrait", "duration": "0:24", "title": "Carry under pressure", "description": "Grass-pitch sequence showing a player in pink and dark kit carrying the ball while opponents close the space."},
+    {"id": "14", "orientation": "portrait", "duration": "0:03", "title": "Touchline duel", "description": "Short grass-pitch sequence showing a white-shirted player contesting the ball near the touchline."},
+    {"id": "09", "orientation": "portrait", "duration": "0:08", "title": "Close-control duel", "description": "Short grass-pitch sequence with the ball contested at close range between orange and blue shirts."},
+    {"id": "02", "orientation": "landscape", "duration": "0:43", "title": "Small-sided game sequence", "description": "Wide view of a small-sided game on an artificial pitch with red, blue and light shirts."},
+    {"id": "04", "orientation": "landscape", "duration": "0:22", "title": "Build-up sequence", "description": "Wide artificial-pitch sequence with yellow and white shirts moving the ball from midfield toward goal."},
+    {"id": "06", "orientation": "landscape", "duration": "0:24", "title": "Midfield passing sequence", "description": "Artificial-pitch sequence showing yellow and white shirts circulating the ball around midfield."},
+    {"id": "07", "orientation": "portrait", "duration": "0:27", "title": "Set-piece phase", "description": "Wide grass-pitch sequence showing white and dark shirts around a restart and the following play."},
+    {"id": "01", "orientation": "portrait", "duration": "0:12", "title": "Wide-field match view", "description": "Distant touchline view of a match on grass. Individual shirt numbers are not readable in this clip."},
+    {"id": "05", "orientation": "portrait", "duration": "0:18", "title": "Open-play field view", "description": "Distant portrait-format view of open play on a grass pitch. Individual shirt numbers are not readable."},
+    {"id": "10", "orientation": "portrait", "duration": "0:05", "title": "Penalty-area sequence", "description": "Brief grass-pitch sequence near goal with a blue-and-red shirt moving toward the penalty area."},
+    {"id": "12", "orientation": "portrait", "duration": "0:03", "title": "Team gathering", "description": "Brief close view of players in white shirts gathered together after play."}
+  ],
+  "images": [
+    {"stem": "joseph-match-carry", "file": "joseph-match-carry.jpg", "cat": "match", "alt": "Joseph carrying the ball through midfield during a match"},
+    {"stem": "joseph-match-dribble-2", "file": "joseph-match-dribble-2.jpg", "cat": "match", "alt": "Joseph taking on a defender during a match"},
+    {"stem": "joseph-match-action", "file": "joseph-match-action.jpg", "cat": "match", "alt": "Joseph in attacking action near goal during a match"},
+    {"stem": "joseph-match-dribble-1", "file": "joseph-match-dribble-1.jpg", "cat": "match", "alt": "Joseph driving forward while challenged by a defender"},
+    {"stem": "joseph-team-photo", "file": "joseph-team-photo.jpg", "cat": "match", "alt": "Joseph with his match-day squad"},
+    {"stem": "action-kick", "file": "action-kick.jpeg", "cat": "action", "alt": "Joseph striking the ball"},
+    {"stem": "action-goal", "file": "action-goal.jpeg", "cat": "action", "alt": "Joseph shooting towards goal"},
+    {"stem": "action-control", "file": "action-control.jpeg", "cat": "action", "alt": "Joseph controlling the ball"},
+    {"stem": "team-local", "file": "team-local.jpeg", "cat": "action", "alt": "Joseph with his local team"},
+    {"stem": "trial-action-1", "file": "trial-action-1.jpeg", "cat": "trial", "alt": "Joseph in a training drill during the Cambrils UCF trial"},
+    {"stem": "trial-team", "file": "trial-team.jpeg", "cat": "trial", "alt": "Group photo from the Cambrils UCF trial"},
+    {"stem": "trial-huddle", "file": "trial-huddle.jpeg", "cat": "trial", "alt": "Players in a huddle during the Cambrils UCF trial"},
+    {"stem": "trial-pitch", "file": "trial-pitch.jpeg", "cat": "trial", "alt": "The pitch used during the Cambrils UCF trial"},
+    {"stem": "trial-gear", "file": "trial-gear.jpeg", "cat": "trial", "alt": "Joseph in kit at the Cambrils UCF trial"},
+    {"stem": "trial-certificate", "file": "trial-certificate.jpeg", "cat": "trial", "alt": "Joseph holding his Cambrils UCF trial participation certificate beside a coach"},
+
+    {"stem": "hero-portrait", "file": "hero-portrait.jpeg", "web": "web/hero-portrait.jpg", "cat": "portrait", "alt": "Portrait of Joseph Ojwang standing indoors"},
+    {"stem": "portrait-1", "file": "portrait-1.jpeg", "web": "web/portrait-1.jpg", "cat": "portrait", "alt": "Portrait of Joseph Ojwang"},
+    {"stem": "portrait-2", "file": "portrait-2.jpeg", "web": "web/portrait-2.jpg", "cat": "portrait", "alt": "Second portrait of Joseph Ojwang"},
+    {"stem": "campnou", "file": "campnou.jpeg", "cat": "portrait", "alt": "Joseph at the FC Barcelona museum at Camp Nou"},
+    {"stem": "stats-overview", "file": "stats-overview.jpeg", "cat": "data", "alt": "Tracker screenshot: session overview, 149 minutes, 352 touches"},
+    {"stem": "stats-speed", "file": "stats-speed.jpeg", "cat": "data", "alt": "Tracker screenshot: top speed 24.5 kph and 33 sprints"},
+    {"stem": "stats-twofooted", "file": "stats-twofooted.jpeg", "cat": "data", "alt": "Tracker screenshot: left and right foot breakdown"},
+    {"stem": "stats-twofeet", "file": "stats-twofeet.jpeg", "cat": "data", "alt": "Tracker screenshot: second view of the two-footed breakdown"},
+    {"stem": "stats-agility", "file": "stats-agility.jpeg", "cat": "data", "alt": "Tracker screenshot: agility and turn counts"}
+  ],
+  "gallery_filters": [
+    {"key": "all", "label": "All"},
+    {"key": "match", "label": "Match"},
+    {"key": "action", "label": "Action"},
+    {"key": "trial", "label": "Trial"},
+    {"key": "portrait", "label": "Portraits"},
+    {"key": "data", "label": "Session data"}
+  ],
+  "variants": [
+    {"n": 1, "slug": "scout-desk", "name": "Scout Desk", "line": "Recruitment dossier with a sticky index", "palette": ["#f3eee3", "#14213d", "#c8102e"]},
+    {"n": 2, "slug": "floodlights", "name": "Floodlights", "line": "Night broadcast with a footage queue", "palette": ["#060807", "#b8ff3c", "#f4f7f2"]},
+    {"n": 3, "slug": "match-programme", "name": "Match Programme", "line": "Editorial matchday programme spreads", "palette": ["#f4efe3", "#121110", "#b3261e"]},
+    {"n": 4, "slug": "half-space", "name": "Half-Space", "line": "Tactical board linking traits to evidence", "palette": ["#0f3a28", "#ece8dc", "#3fe0e8"]},
+    {"n": 5, "slug": "proof-of-play", "name": "Proof of Play", "line": "Documentary archive and evidence timeline", "palette": ["#ebe9e4", "#141414", "#1f4fbf"]},
+    {"n": 6, "slug": "bilateral", "name": "Bilateral", "line": "Left and right, measured side by side", "palette": ["#0b0d16", "#2448ff", "#ff6a4d"]},
+    {"n": 7, "slug": "the-number-ten", "name": "The Number Ten", "line": "Cinematic chapters around the #10", "palette": ["#0b0807", "#d6a64f", "#3b1838"]},
+    {"n": 8, "slug": "kitengela-to-cambrils", "name": "Kitengela to Cambrils", "line": "A geographic documentary of the places on record", "palette": ["#f1e5cf", "#b4532a", "#1c5d99"]},
+    {"n": 9, "slug": "frame-by-frame", "name": "Frame by Frame", "line": "Contact-sheet portfolio with media filters", "palette": ["#ffffff", "#1e1e1e", "#e8452c"]},
+    {"n": 10, "slug": "sixty-second-scout", "name": "60-Second Scout", "line": "Six-step executive briefing at your own pace", "palette": ["#ffffff", "#0a0a0a", "#ff2a1a"]}
+  ]
+}

@@ -1,0 +1,93 @@
+/* 08 Nairobi to Catalonia: earth and Mediterranean blue; a drawn route and places on the record. */
+
+.v08 {
+  --bg: #f1e5cf;
+  --fg: #2a1d14;
+  --muted: #6a5646;
+  --surface: #f8efdf;
+  --surface-2: #e5d2b3;
+  --line: rgb(42 29 20 / 0.18);
+  --accent: #b4532a;
+  --accent-ink: #ffffff;
+  --accent-2: #1c5d99;
+  --focus: #1c5d99;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Newsreader", Georgia, serif;
+  --radius: 16px;
+}
+body.v08 { font-size: 1.08rem; }
+.v08 .design-bar { background: #2a1d14; }
+.v08 .site-nav a, .v08 .btn, .v08 .chip, .v08 .field label, .v08 .stat-label, .v08 .clip-cap { font-family: "Bricolage Grotesque", system-ui, sans-serif; }
+.v08 .btn--ghost { border-color: var(--accent-2); color: var(--accent-2); }
+.v08 .btn--ghost:hover { background: var(--accent-2); color: #fff; }
+
+/* Hero: copy beside a drawn route with a passport-style photo */
+.hero--route { overflow: hidden; background: radial-gradient(70% 60% at 85% 20%, rgb(28 93 153 / 0.16), transparent 70%), radial-gradient(60% 50% at 10% 90%, rgb(180 83 42 / 0.14), transparent 70%); }
+.route-wrap { display: grid; gap: 1.25rem; max-width: 1400px; margin: 0 auto; grid-template-areas: "photo" "copy" "map"; }
+.route-copy { grid-area: copy; }
+.route-photo { grid-area: photo; justify-self: start; width: min(62%, 260px); padding: 8px 8px 28px; background: #fffaf0; box-shadow: 0 14px 30px -12px rgb(42 29 20 / 0.45); transform: rotate(-2.5deg); }
+.route-photo img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%; }
+.route-map { grid-area: map; }
+.route-map figcaption { max-width: 56ch; font-size: 0.95rem; line-height: 1.5; color: #5f5045; font-style: italic; }
+.route { width: 100%; height: auto; }
+.route .graticule { color: rgb(28 93 153 / 0.18); }
+.route-line { stroke: var(--accent); stroke-width: 4; stroke-linecap: round; }
+.route-stop circle { fill: var(--accent-2); stroke: #f1e5cf; stroke-width: 3; }
+.route-stop text { font: 700 22px "Bricolage Grotesque", sans-serif; fill: var(--fg); }
+.route-stop--minor text { font-size: 16px; font-weight: 500; fill: var(--muted); }
+.v08 .kicker { color: var(--accent-2); font-weight: 500; }
+.v08 .hero h1 { font-weight: 800; font-size: clamp(2.8rem, 1.4rem + 5.5vw, 7rem); letter-spacing: -0.04em; line-height: 0.9; }
+.v08 .n-middle { font-family: "Newsreader", serif; font-style: italic; font-weight: 400; color: var(--accent); }
+.v08 .idline { font-family: "Bricolage Grotesque", sans-serif; }
+@media (min-width: 921px) {
+  .route-wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "copy map"; align-items: center; min-height: min(78vh, 780px); }
+  .route-map { grid-area: map; padding: 3.5rem 0 0 18%; }
+  .route-photo { grid-area: map; align-self: start; justify-self: start; width: min(38%, 230px); z-index: 2; }
+}
+
+/* Sections: stops along the way */
+.v08 .sec-head { padding-left: 1.25rem; border-left: 3px dotted var(--accent); }
+.v08 .sec-kicker { color: var(--accent); font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; }
+.v08 .sec-kicker::before { content: "● "; color: var(--accent-2); }
+.v08 .sec-head h2 { font-weight: 800; letter-spacing: -0.03em; font-size: clamp(2.2rem, 1.4rem + 3vw, 4.2rem); }
+.v08 .sec:nth-of-type(even) { background: var(--surface); }
+.v08 .trial-club { color: var(--accent-2); }
+
+/* Places on the record: postcards */
+.pathway { margin-block: 2rem 1rem; }
+.v08 .stops { counter-reset: stop; }
+.v08 .stop { counter-increment: stop; position: relative; border: 0; background: #fffaf0; box-shadow: 0 10px 24px -14px rgb(42 29 20 / 0.5); }
+.v08 .stop::after {
+  content: counter(stop, decimal-leading-zero);
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 2px dashed #fffaf0;
+  border-radius: 50%;
+  background: var(--accent-2);
+  color: #fff;
+  font: 700 0.9rem "Bricolage Grotesque", sans-serif;
+}
+.v08 .stop h4 { font-size: 1.3rem; }
+.v08 .stop-coord { color: var(--accent-2); }
+
+.v08 .trait { border: 0; background: #fffaf0; border-radius: var(--radius); box-shadow: 0 8px 20px -14px rgb(42 29 20 / 0.5); }
+.v08 .stat { background: #fffaf0; }
+.v08 .stat-value { color: var(--accent); font-weight: 800; }
+.v08 .bar--l .bar-fill { background: var(--accent-2); }
+.v08 .bar--r .bar-fill { background: var(--accent); }
+.v08 .rep-card { background: var(--accent-2); color: #fff; }
+.v08 .rep-card .ticks li::before { color: #ffd7a8; }
+.v08 .g-link img, .v08 .trial-item img { border-radius: 12px; }
+.v08 .site-footer { background: #2a1d14; color: #f1e5cf; }
+
+@media (max-width: 600px) {
+  .route-photo { width: min(44%, 200px); padding: 6px 6px 18px; }
+  .v08 .hero h1 { font-size: clamp(2.2rem, 1rem + 7vw, 3.2rem); }
+  .route-wrap { gap: 1rem; }
+  .route-map figcaption { font-size: 0.9rem; }
+}

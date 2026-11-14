@@ -1,0 +1,102 @@
+/* 07 The Number Ten: cinematic black, gold and plum; a dramatic #10 with chapter navigation. */
+
+.v07 {
+  --bg: #0b0807;
+  --fg: #f3ece0;
+  --muted: #b8ab98;
+  --surface: #151010;
+  --surface-2: #241a1b;
+  --line: rgb(243 236 224 / 0.13);
+  --accent: #d6a64f;
+  --accent-ink: #0b0807;
+  --accent-2: #8a3d84;
+  --plum: #3b1838;
+  --focus: #f6d38f;
+  --light: rgb(214 166 79 / 0.14);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Geist", system-ui, sans-serif;
+  --radius: 4px;
+  color-scheme: dark;
+}
+.v07 .design-bar { background: #050303; color: var(--fg); }
+.v07 .site-header { background: rgb(11 8 7 / 0.82); }
+.v07 .brand { font-style: italic; font-weight: 500; }
+.v07 .btn { border-radius: 2px; letter-spacing: 0.04em; }
+.v07 .btn--ghost { border-color: var(--accent); color: var(--accent); }
+.v07 .btn--ghost:hover { background: var(--accent); color: var(--accent-ink); }
+
+/* Hero: the numeral, the player, the chapters */
+.hero--ten {
+  display: grid;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 0 var(--gutter) 1.5rem;
+  background: radial-gradient(90% 70% at 70% 30%, var(--plum) 0%, #0b0807 70%);
+}
+.ten-numeral {
+  position: absolute;
+  z-index: -1;
+  right: -4vw;
+  top: -2vw;
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(14rem, 8rem + 32vw, 46rem);
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(214 166 79 / 0.55);
+  pointer-events: none;
+  user-select: none;
+}
+.ten-photo { position: relative; margin: 0 auto; width: min(100%, 420px); }
+.ten-photo img { aspect-ratio: 4 / 4.2; max-height: 44vh; object-fit: cover; object-position: 50% 12%; mask-image: linear-gradient(180deg, #000 70%, transparent 100%); -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%); }
+.ten-copy { position: relative; z-index: 2; }
+.v07 .kicker { color: var(--accent); }
+.v07 .hero h1 { font-weight: 300; font-size: clamp(2.8rem, 1.2rem + 6vw, 7.5rem); letter-spacing: -0.035em; line-height: 0.9; }
+.v07 .n-middle { font-style: italic; color: var(--accent); }
+.v07 .idline span { border-color: rgb(214 166 79 / 0.35); }
+.ten-chapters { position: relative; z-index: 2; margin-top: 1.5rem; border-top: 1px solid var(--line); }
+.ten-chapters ol { display: flex; flex-wrap: wrap; gap: 0 1.5rem; padding-top: 0.5rem; }
+.ten-chapters a { display: inline-flex; align-items: baseline; gap: 0.4rem; min-height: 44px; padding-top: 0.55rem; text-decoration: none; font-size: 0.95rem; color: #c6bdb7; transition: color 200ms; }
+.ten-chapters a span { font-family: var(--font-display); font-style: italic; color: var(--accent); }
+.ten-chapters a:hover, .ten-chapters a[aria-current="true"] { color: var(--fg); }
+
+@media (min-width: 921px) {
+  .hero--ten { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); grid-template-rows: 1fr auto; min-height: min(90vh, 900px); padding-top: 2rem; }
+  .ten-copy { grid-column: 1; grid-row: 1; align-self: end; padding-bottom: 2rem; }
+  .ten-photo { grid-column: 2; grid-row: 1; align-self: end; width: 100%; max-width: 520px; }
+  .ten-photo img { aspect-ratio: 3 / 4; max-height: 76vh; }
+  .ten-chapters { grid-column: 1 / -1; grid-row: 2; margin-top: 0; }
+  .ten-numeral { right: 2vw; top: 50%; translate: 0 -50%; }
+}
+
+/* Chapters */
+.v07 .sec { position: relative; }
+.v07 .sec:nth-of-type(odd) { background: linear-gradient(180deg, #0b0807, #1a0f18 50%, #0b0807); }
+.v07 .sec-head { position: relative; }
+.v07 .sec-kicker { font-family: var(--font-display); font-style: italic; font-size: 1.25rem; text-transform: none; letter-spacing: 0; color: var(--accent); }
+.v07 .sec-head h2 { font-weight: 300; font-size: clamp(2.4rem, 1.4rem + 4vw, 5.4rem); letter-spacing: -0.03em; }
+.v07 .sec-head::after { content: ""; display: block; height: 1px; margin-top: 1.25rem; background: var(--accent); width: 120px; transform-origin: 0 50%; transition: transform 1200ms var(--ease-in-out) 200ms; }
+.motion-ready .v07 .sec-head:not(.is-in)::after { transform: scaleX(0); }
+.v07 .clip-frame { border-radius: 2px; box-shadow: 0 0 0 1px rgb(214 166 79 / 0.25); }
+.v07 .stat { background: var(--surface); }
+.v07 .stat-value { font-weight: 300; color: var(--accent); }
+.v07 .bar--l .bar-fill { background: var(--accent-2); }
+.v07 .bar--r .bar-fill { background: var(--accent); }
+.v07 .trait { background: var(--surface); border-color: var(--line); }
+.v07 .trait h4 { font-weight: 400; font-style: italic; }
+.v07 .facts dd { font-family: var(--font-display); font-weight: 400; font-size: 1.1rem; }
+.v07 .rep-card { background: linear-gradient(160deg, var(--plum), #120b0c); color: var(--fg); border: 1px solid rgb(214 166 79 / 0.35); }
+.v07 .rep-name { font-weight: 300; font-style: italic; color: var(--accent); }
+.v07 .field input, .v07 .field textarea { background: var(--surface); }
+.v07 .chip { background: transparent; color: var(--fg); }
+.v07 .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.v07 .g-link img { filter: saturate(0.85); }
+.v07 .site-footer { background: #050303; color: var(--fg); border-top: 1px solid rgb(214 166 79 / 0.3); }
+
+@media (max-width: 600px) {
+  .ten-photo img { max-height: 30vh; }
+  .v07 .hero h1 { font-size: clamp(2.3rem, 1rem + 7vw, 3.2rem); }
+}
